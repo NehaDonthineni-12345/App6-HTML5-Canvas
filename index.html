@@ -39,20 +39,20 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-	function draw_a(){ // function to draw a rectangle in canvas -- triggered by onclick function in 'draw rectangle' button
+	function draw_a(){ <!-- function to draw a rectangle in canvas -- triggered by onclick function in 'draw rectangle' button -->
 		var a_canvas = document.getElementById("a");
  		var a_context = a_canvas.getContext("2d");
- 			a_context.fillRect(50, 25, 150, 100); // proportions of rectangle that is filled on canvas
+ 			a_context.fillRect(50, 25, 150, 100); <!-- proportions of rectangle that is filled on canvas -->
 	}
 	
-	function text_a(){ // function to put "Neha" in canvas -- 'draw text' button
+	function text_a(){ <!-- function to put "Neha" in canvas -- 'draw text' button -->
 		var a_canvas = document.getElementById("a");
 		var ctx = a_canvas.getContext("2d");
-			ctx.font = "30px Arial"; //font of "Neha" in canvas
-			ctx.fillText("Neha", 10, 50); //coordinates of "Neha" in canvas
+			ctx.font = "30px Arial"; <!-- font of "Neha" in canvas -->
+			ctx.fillText("Neha", 10, 50); <!-- coordinates of "Neha" in canvas -->
 	}
 	
-	function image_a(){ //function to insert image in canvas -- 'draw image' button
+	function image_a(){ <!-- function to insert image in canvas -- 'draw image' button -->
 		var a_canvas = document.getElementById("a");
 		var a_context = c.getContext("2d");
 		var img = document.createElement("img");
@@ -84,20 +84,20 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1> //title of the page
+	<h1>App6---HTML5-Canvas</h1> <!-- title of the page -->
 </div>
 	
 <div id="content" class="w3-container">
-	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas> //black border around canvas; creates an id for canvas
+	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas> <!-- black border around canvas; creates an id for canvas -->
 	
-	<a onclick="draw_a();" class="w3-btn w3-grey w3-round"> Draw Rectangle </a> //rectangle button puts black box on canvas
+	<a onclick="draw_a();" class="w3-btn w3-grey w3-round"> Draw Rectangle </a> <!-- rectangle button puts black box on canvas -->
 	
-	<a onclick="text_a();" class="w3-btn w3-grey w3-round"> Draw Text </a> //text button puts "Neha" on canvas
+	<a onclick="text_a();" class="w3-btn w3-grey w3-round"> Draw Text </a> <!-- text button puts "Neha" on canvas -->
 	
-	<a onclick="image_a();" class="w3-btn w3-grey w3-round"> Draw Image </a> //image button puts image on canvas
+	<a onclick="image_a();" class="w3-btn w3-grey w3-round"> Draw Image </a> <!-- image button puts image on canvas -->
 		
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p> //same code as former apps
+	<p>DIY!</p> <!-- same code as former apps -->
 </footer>
 
 </body>
