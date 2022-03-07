@@ -44,6 +44,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
  		var a_context = a_canvas.getContext("2d");
  		a_context.fillRect(50, 25, 150, 100);
 	}
+	
+	function text_a(){
+		var a_canvas = document.getElementById("a");
+		var ctx = c.getContext("2d");
+		ctx.font = "30px Arial";
+		ctx.fillText("Neha", 10, 50);
+	}
 </script>
 
 
@@ -75,7 +82,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas>
-	<a onclick="draw_a();" class="w3-btn w3-grey w3-round"> Draw Rectangle </a>	
+	<a onclick="draw_a();" class="w3-btn w3-grey w3-round"> Draw Rectangle </a>
+	<a onclick="text_a();" class="w3-btn w3-grey w3-round"> Draw Text </a>
 		
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
