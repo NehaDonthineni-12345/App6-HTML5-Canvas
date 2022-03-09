@@ -55,7 +55,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function image_a(){ <!-- function to insert image in canvas -- 'draw image' button -->
 		var a_canvas = document.getElementById("a");
 		var a_context = a_canvas.getContext("2d");
-		ctx.drawImage(document.getElement("skeleton.jpg"),
+		ctx.drawImage(document.getElement("person"),
 			      img, 10, 10, 10, 10);
 	}
 	function clear_a(){ <!-- function clears canvas (reset) -->
@@ -100,7 +100,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 	<a onclick="image_a();" class="w3-btn w3-grey w3-round"> Draw Image </a> <!-- image button puts image on canvas -->
 		
-<img id="skeleton.jpg" img.src = "skeleton.jpg" alt= "Skeleton" width="220" height="277">
+<img id="person" img.src = "https://www.womanlog.com/getimage?key=f7b8b3d302081c1ecfd8954391051e57428db9c4c6f4426ef8a8c9bed7ffb9b4" alt= "Person" width="220" height="277">
 
 	
 	<a onclick="clear_a();" class="w3-btn w3-grey w3-round"> Clear Canvas </a> <!-- resets blank canvas -->
