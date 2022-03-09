@@ -38,7 +38,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+</script>
 	
+<style>	
+.body {
+     margin: 0em;
+}
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+<body>
+	<div id="content" class="w3-container">
+	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas> <!-- black border around canvas; creates an id for canvas -->
+	<script>
 	function draw_a(){ <!-- function to draw a rectangle in canvas -- triggered by onclick function in 'draw rectangle' button -->
 		var a_canvas = document.getElementById("a");
  		var a_context = a_canvas.getContext("2d");
@@ -65,46 +89,20 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 </script>
 
-	
-<style>	
-.body {
-     margin: 0em;
-}
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
 
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1> <!-- title of the page -->
-</div>
-	
-<div id="content" class="w3-container">
-	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas> <!-- black border around canvas; creates an id for canvas -->
-	
+	<div id="header" class="w3-container w3-flat-carrot">
+	<h1>App6---HTML5-Canvas</h1> <!-- title of the page -->	
+
 	<a onclick="draw_a();" class="w3-btn w3-grey w3-round"> Draw Rectangle </a> <!-- rectangle button puts black box on canvas -->
 	
 	<a onclick="text_a();" class="w3-btn w3-grey w3-round"> Draw Text </a> <!-- text button puts "Neha" on canvas -->
 	
 	<a onclick="image_a();" class="w3-btn w3-grey w3-round"> Draw Image </a> <!-- image button puts image on canvas -->
-		
-<img id="person" src = "https://www.womanlog.com/getimage?key=f7b8b3d302081c1ecfd8954391051e57428db9c4c6f4426ef8a8c9bed7ffb9b4" alt= "Person" width="220" height="277">
-
 	
 	<a onclick="clear_a();" class="w3-btn w3-grey w3-round"> Clear Canvas </a> <!-- resets blank canvas -->
 		
+<img id="person" src = "https://www.womanlog.com/getimage?key=f7b8b3d302081c1ecfd8954391051e57428db9c4c6f4426ef8a8c9bed7ffb9b4" alt= "Person" width="220" height="277">
+
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p> <!-- same code as former apps -->
 </footer>
